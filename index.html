@@ -5,25 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Duc Huy Cao Resume</title>
   <style>
-    /* Page layout */
+    /* =====================================================================
+       PAGE LAYOUT
+       Centers the resume on screen with a white card effect.
+       Background is light gray; the resume itself is white.
+    ===================================================================== */
     body {
       margin: 0;
-      background: #f3f3f3;
-      color: #111;
-      font-family: "Times New Roman", Times, serif;
+      background: #f3f3f3;    /* Light gray page background */
+      color: #111;             /* Near-black default text */
+      font-family: "Times New Roman", Times, serif; /* Classic resume serif font */
       line-height: 1.4;
     }
 
+    /* Constrains width to mimic a printed page and centers it */
     .resume-page {
       max-width: 960px;
-      min-height: 100vh;
-      margin: 30px auto;
-      padding: 48px 60px;
+      min-height: 100vh;        /* At least full viewport height */
+      margin: 30px auto;        /* Centered horizontally, 30px from top */
+      padding: 48px 60px;       /* Inner breathing room */
       background: #fff;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.12); /* Subtle depth effect */
     }
 
-    /* Header section */
+    /* =====================================================================
+       HEADER — Name + contact info centered at the top
+    ===================================================================== */
     .header {
       text-align: center;
       margin-bottom: 28px;
@@ -34,24 +41,29 @@
       font-size: 34px;
       font-weight: 700;
       letter-spacing: 0.5px;
-      text-transform: uppercase;
+      text-transform: uppercase; /* Makes the name feel prominent */
     }
 
+    /* One-line row of contact details below the name */
     .contact-line {
       margin-top: 6px;
       font-size: 17px;
     }
 
+    /* Style for email and URL links in the contact line */
     .contact-line a {
       color: #0000ee;
       text-decoration: underline;
     }
 
-    /* Section titles and divider lines */
+    /* =====================================================================
+       SECTION WRAPPERS — Shared spacing for Education, Skills, etc.
+    ===================================================================== */
     .section {
       margin-top: 24px;
     }
 
+    /* Bold uppercase heading above each section (e.g. "EDUCATION") */
     .section-title {
       font-size: 22px;
       font-weight: 700;
@@ -59,48 +71,61 @@
       margin-bottom: 10px;
     }
 
+    /* Thin horizontal rule drawn just below each section title */
     .section-line {
       border: none;
       border-top: 1px solid #333;
       margin: 0 0 14px;
     }
 
-    /* Education rows */
+    /* =====================================================================
+       ROW — Two-column layout: left content, right-aligned date/text
+       Used primarily in the Education section.
+    ===================================================================== */
     .row {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-between; /* Pushes date to the far right */
       gap: 20px;
       margin-bottom: 14px;
       font-size: 20px;
     }
 
     .row strong {
-      font-weight: 700;
+      font-weight: 700; /* Bold school/institution names */
     }
 
+    /* Date or location text; kept on one line and right-aligned */
     .right-text {
       white-space: nowrap;
       text-align: right;
     }
 
-    /* Skills section */
+    /* =====================================================================
+       SKILLS SECTION — Two-column grid: label on left, values on right
+    ===================================================================== */
     .skills-grid {
       display: grid;
-      grid-template-columns: 170px 1fr;
+      grid-template-columns: 170px 1fr; /* Fixed label width, flexible value */
       row-gap: 6px;
       column-gap: 20px;
       font-size: 19px;
     }
 
+    /* Bold category names like "Technical Skills:", "Languages:" */
     .skill-label {
       font-weight: 700;
     }
 
-    /* Experience and project sections */
+    /* =====================================================================
+       EXPERIENCE & PROJECTS — Job and project entry containers
+    ===================================================================== */
+
+    /* Spacing wrapper for each individual job entry */
     .job {
       margin-bottom: 22px;
     }
 
+    /* Top row of a job/project: title on the left, date range on the right */
     .job-header,
     .project-header {
       display: flex;
@@ -110,12 +135,14 @@
       margin-bottom: 2px;
     }
 
+    /* Slightly larger bold job/project title */
     .job-title,
     .project-title {
       font-weight: 700;
       font-size: 21px;
     }
 
+    /* Second row under job header: company name on left, city on right */
     .company-line {
       display: flex;
       justify-content: space-between;
@@ -124,30 +151,37 @@
       margin-bottom: 10px;
     }
 
+    /* City/state displayed in italics */
     .location {
       font-style: italic;
-      white-space: nowrap;
+      white-space: nowrap; /* Prevents "Pittsburgh,\nPA" wrapping */
     }
 
+    /* Bullet points for job duties and project details */
     ul {
       margin-top: 0;
-      padding-left: 38px;
+      padding-left: 38px; /* Indentation for bullets */
       font-size: 18px;
     }
 
     li {
-      margin-bottom: 9px;
+      margin-bottom: 9px;   /* Space between each bullet */
       padding-left: 4px;
     }
 
-    /* Small-screen support */
+    /* =====================================================================
+       RESPONSIVE BREAKPOINT — Collapses two-column layouts on narrow screens
+       (phones or printed at small scale)
+    ===================================================================== */
     @media (max-width: 700px) {
+      /* Remove page margins and shadow on small screens */
       .resume-page {
         margin: 0;
         padding: 32px 24px;
         box-shadow: none;
       }
 
+      /* Stack left/right pairs vertically instead of side by side */
       .row,
       .job-header,
       .project-header,
@@ -156,11 +190,13 @@
         gap: 2px;
       }
 
+      /* Dates and locations align left when stacked */
       .right-text,
       .location {
         text-align: left;
       }
 
+      /* Skills grid becomes single-column on small screens */
       .skills-grid {
         grid-template-columns: 1fr;
       }
@@ -169,7 +205,10 @@
 </head>
 <body>
   <main class="resume-page">
-    <!-- Resume header -->
+
+    <!-- ===================================================================
+         HEADER — Name and contact information
+    =================================================================== -->
     <header class="header">
       <h1>Duc Huy Cao</h1>
       <div class="contact-line">
@@ -180,55 +219,69 @@
       </div>
     </header>
 
-    <!-- Education section -->
+    <!-- ===================================================================
+         EDUCATION — Degrees listed with institution name and graduation year
+    =================================================================== -->
     <section class="section">
       <div class="section-title">Education</div>
       <hr class="section-line" />
 
+      <!-- Degree 1: Bachelor's -->
       <div class="row">
         <div><strong>Southern New Hampshire University</strong>, Bachelor of Computer Science</div>
         <div class="right-text">2025</div>
       </div>
 
+      <!-- Degree 2: Associate's -->
       <div class="row">
         <div><strong>Community College of Allegheny County</strong>, Associate of Science in Computer Information Systems</div>
-        <div class="right-text">2017 &ndash; 2020</div>
+        <div class="right-text">2017 &ndash; 2020</div> <!-- &ndash; = em dash "–" -->
       </div>
     </section>
 
-    <!-- Skills section -->
+    <!-- ===================================================================
+         SKILLS — Three categories: Technical, Soft, Languages
+    =================================================================== -->
     <section class="section">
       <div class="section-title">Skills</div>
       <hr class="section-line" />
 
       <div class="skills-grid">
+        <!-- Row 1: Technical skills (programming languages and libraries) -->
         <div class="skill-label">Technical Skills:</div>
         <div>Java, Python, HTML, CSS, C#, Unity, Linux, NumPy, Pandas, Matplotlib</div>
 
+        <!-- Row 2: Interpersonal and professional skills -->
         <div class="skill-label">Soft Skills:</div>
         <div>Communication, Teamwork, Problem-Solving, Time Management, Continuous Learning</div>
 
+        <!-- Row 3: Spoken/written languages -->
         <div class="skill-label">Languages:</div>
         <div>Vietnamese, English</div>
       </div>
     </section>
 
-    <!-- Experience section -->
+    <!-- ===================================================================
+         EXPERIENCE — Work history in reverse chronological order
+    =================================================================== -->
     <section class="section">
       <div class="section-title">Experience</div>
       <hr class="section-line" />
 
+      <!-- Job 1: Current role — Help Desk Technician -->
       <div class="job">
         <div class="job-header">
           <div class="job-title">Help Desk Technician</div>
           <div class="right-text">Mar 2025 &ndash; Present</div>
         </div>
 
+        <!-- Company name and city/state on the same line -->
         <div class="company-line">
           <div>ST Engineering, Aethon</div>
           <div class="location">Pittsburgh, PA</div>
         </div>
 
+        <!-- Key responsibilities and accomplishments as bullet points -->
         <ul>
           <li>Over 1 year plus + Customer Services and assistance over the phone and working with ticket system.</li>
           <li>Managed and troubleshot robotic systems using Linux commands, resolving issues for over 200 corporate partners, including hospitals and enterprise clients. Diagnosed and resolved hardware and software problems remotely using Linux commands and system diagnostic tools, optimizing robot operations with Ubuntu commands.</li>
@@ -236,6 +289,7 @@
         </ul>
       </div>
 
+      <!-- Job 2: CS Tutor / IT Support (ongoing) -->
       <div class="job">
         <div class="job-header">
           <div class="job-title">Computer Science Tutor / IT Support</div>
@@ -254,6 +308,7 @@
         </ul>
       </div>
 
+      <!-- Job 3: Internship (completed) -->
       <div class="job">
         <div class="job-header">
           <div class="job-title">Game Developer Intern</div>
@@ -273,14 +328,17 @@
       </div>
     </section>
 
-    <!-- Projects section -->
+    <!-- ===================================================================
+         PROJECTS — Notable personal or academic projects
+    =================================================================== -->
     <section class="section">
       <div class="section-title">Projects</div>
       <hr class="section-line" />
 
+      <!-- Project 1: Pittsburgh neighborhood data analysis -->
       <div class="project-header">
         <div class="project-title">The Best Neighborhood of Pittsburgh</div>
-        <div class="right-text">Project Link</div>
+        <div class="right-text">Project Link</div> <!-- Placeholder: replace with actual URL -->
       </div>
 
       <ul>
@@ -289,6 +347,7 @@
         <li>Created a data-driven presentation highlighting neighborhoods with optimal scores, demonstrating skills in data analysis, visualization, and collaborative software development.</li>
       </ul>
     </section>
+
   </main>
 </body>
 </html>
