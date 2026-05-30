@@ -1,3 +1,5 @@
+Link: https://duchuycao15.github.io/resume/
+
 This website is my resume, the version I wrote on my computer and hosted here, and that’s why I built the application:
 
 Update: 
