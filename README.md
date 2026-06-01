@@ -35,3 +35,5 @@ I’m constantly adding fresh content: new certifications, project updates, and 
 📚 A downloadable version of my résumé in multiple languages.
 
 Thank you for stopping by! Feel free to explore, download, or reach out—your feedback helps me grow both as a professional and as a content creator. 🌟
+
+Change the resume that still ateneding,
