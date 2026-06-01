@@ -37,3 +37,5 @@ I’m constantly adding fresh content: new certifications, project updates, and 
 Thank you for stopping by! Feel free to explore, download, or reach out—your feedback helps me grow both as a professional and as a content creator. 🌟
 
 Change the resume that still ateneding,
+Chỉnh lại code html
+
