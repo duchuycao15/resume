@@ -39,6 +39,8 @@ Thank you for stopping by! Feel free to explore, download, or reach out—your f
 Change the resume that still ateneding,
 Chỉnh lại code html
 
+Change the projects.
+
 
 
 🌐 ウェブ上の履歴書 このサイトはHTML5とCSS3のみで構築されており、誰でもどこからでもワンクリックで履歴書を閲覧できます。JavaScriptやフレームワークは一切不要で、ノートパソコン・タブレット・スマートフォンいずれでも美しく表示されるレスポンシブデザインです。📱💻
