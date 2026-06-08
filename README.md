@@ -40,6 +40,8 @@ Change the resume that still ateneding,
 Chỉnh lại code html
 
 Change the projects.
+Tip tuc them link vao cai project
+
 
 Add more expreincse and link to the project
 add more link to the projects
