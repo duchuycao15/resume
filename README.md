@@ -42,6 +42,8 @@ Chỉnh lại code html
 Change the projects.
 Tip tuc them link vao cai project
 
+do you the video again
+
 
 Add more expreincse and link to the project
 add more link to the projects
