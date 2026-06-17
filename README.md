@@ -44,7 +44,7 @@ Tip tuc them link vao cai project
 
 do you the resume again
 Thêm cái đường link
-
+Chỉnh lại link với các projects
 
 Add more expreincse and link to the project
 add more link to the projects
