@@ -49,6 +49,8 @@ Chỉnh lại link với các projects
 Add more expreincse and link to the project
 add more link to the projects
 Thêm các dự án vào
+Thêm các đường link cho dự án 
+
 
 
 🌐 ウェブ上の履歴書 このサイトはHTML5とCSS3のみで構築されており、誰でもどこからでもワンクリックで履歴書を閲覧できます。JavaScriptやフレームワークは一切不要で、ノートパソコン・タブレット・スマートフォンいずれでも美しく表示されるレスポンシブデザインです。📱💻
